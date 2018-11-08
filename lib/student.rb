@@ -1,4 +1,5 @@
 require_relative "./user.rb"
+
 class Student < User
   attr_reader :knowledge
 
@@ -6,8 +7,7 @@ class Student < User
     @knowledge = []
   end
 
-  def learn(string)
-    @string = string
-    @knowledge << @string
+  def learn(skill)
+    @knowledge << skill
   end
 end
