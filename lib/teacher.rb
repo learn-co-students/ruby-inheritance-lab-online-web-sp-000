@@ -10,7 +10,7 @@ class Teacher < User          #Teach inherits User
                "bash Ruby rvm update certs"]
 
   def teach
-    KNOWLEDGE.sample        #returns Class Constant String
+    KNOWLEDGE.sample        #returns a random element from that array using Array#sample
   end
 
 end
