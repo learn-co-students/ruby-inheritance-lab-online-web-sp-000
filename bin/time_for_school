@@ -17,4 +17,22 @@ some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi."
+
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "Jones"
+
+more_knowledge = avi.teach 
+jim.learn(more_knowledge)
+
+puts "Jim learned this important knowledge: '#{jim.knowledge.first}' from Avi."
+
+jenise = Student.new
+jenise.first_name = "Jenise"
+jenise.last_name = "Duchess of Clover"
+
+even_more_knowledge = avi.teach 
+jenise.learn(even_more_knowledge)
+
+puts "Jenise, Duchess of Clover learned this important knowledge: '#{jenise.knowledge.first}' from Avi." 
