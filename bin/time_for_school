@@ -13,8 +13,27 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Halpert"
+
+# this doesn't work - User class doesn't have the #learn method
+# jim.learn(some_knowledge)
+
+some_more_knowledge = avi.teach
+steve.learn(some_more_knowledge)
+
+joel = Student.new
+joel.first_name = "Joel"
+joel.last_name = "Kelly"
+joel.learn(some_knowledge)
+joel.learn(some_more_knowledge)
+
+puts "This is what Joel knows: #{joel.knowledge}."
+puts "This is what Steve knows: #{steve.knowledge}."
