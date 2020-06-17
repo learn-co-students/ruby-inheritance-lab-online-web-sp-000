@@ -16,5 +16,26 @@ avi.last_name = "Flombaum"
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+steve.learn(more_important_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Belushi"
+
+jim.learn(some_knowledge)
+
+
+adam = Student.new
+adam.first_name = "Adam"
+adam.last_name = "Enbar"
+
+adam.learn(some_knowledge)
+adam.learn(more_knowledge)
+adam.learn(more_important_knowledge)
+
+puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+
+puts "Adam just learned this important knowledge: '#{adam.knowledge.first}' from Avi"
+
