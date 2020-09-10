@@ -8,14 +8,14 @@ class Student < User
   
 
   def initialize
-    knowledge
+    @knowledge = []
   end
 
   def learn(knowledge)
     self.knowledge << knowledge
   end
 
-  def knowledge=(knowledge)
-    knowledge = []
+  def knowledge
+    @knowledge
   end
 end

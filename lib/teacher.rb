@@ -13,6 +13,6 @@ class Teacher < User
 
 
   def teach
-    KNOWLEDGE
+    return KNOWLEDGE[2]
   end
 end
