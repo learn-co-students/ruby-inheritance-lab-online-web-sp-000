@@ -4,6 +4,7 @@ class Student < User
   
   
   attr_accessor :first_name, :last_name
+  attr_reader :knowledge
   
 
   def initialize
@@ -14,7 +15,7 @@ class Student < User
     self.knowledge << knowledge
   end
 
-  def knowledge
-    @knowledge = []
+  def knowledge=(knowledge)
+    knowledge = []
   end
 end
