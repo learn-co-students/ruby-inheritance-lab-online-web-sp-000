@@ -8,6 +8,10 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+ozzy = Student.new
+ozzy.first_name = "Ozzy"
+ozzy.last_name = "Ozbourne"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
@@ -15,6 +19,21 @@ avi.last_name = "Flombaum"
 
 some_knowledge = avi.teach 
 
-steve.learn(some_knowledge)
+
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+
+ozzy.learn(avi.teach)
+ozzy.learn(avi.teach)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+steve.knowledge.each do |knowledge|
+  puts knowledge
+end
+
+ozzy.knowledge.each do |knowledge|
+  puts knowledge
+end
+
