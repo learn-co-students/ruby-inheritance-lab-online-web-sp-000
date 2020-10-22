@@ -8,13 +8,53 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+guy = Student.new
+guy.first_name = "Guy"
+guy.last_name = "Fawkes"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Doughnut Sprinkles"
 
-some_knowledge = avi.teach 
 
-steve.learn(some_knowledge)
+
+
+#some_knowledge = avi.teach 
+#jim.learn(some_knowledge)
+steve.learn(avi.teach)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+puts "Ready for some more KNOW-HOW Steve?" 
+puts "Oh heck YES you are!"
+
+steve.learn(avi.teach)
+
+puts "You just learned some kinda info!!!! But what was it? OH YEAH! '#{steve.knowledge.last.upcase}!!!!!!! You learned individual!'"
+
+puts "How about you GUY?!"
+puts "KNOWLEDGE AWAY!!"
+
+guy.learn(avi.teach)
+
+puts "Guy just learned this important knowledge: '#{guy.knowledge.first}' from Avi"
+
+puts"Here is some more skull crushing KNOWLEDGE!!!!"
+
+guy.learn(avi.teach)
+
+puts "You just learned some kinda info!!!! But what was it? OH YEAH! '#{steve.knowledge.last.upcase}!!!!!!! You learned GUY!'"
+
+puts "So what did we learn today?"
+
+puts "Guy knows:"
+guy.knowledge.map{|info| puts "#{info}"}
+
+puts "Steve knows:"
+steve.knowledge.map{|info| puts "#{info}"}
+
+puts"That is all folks."
