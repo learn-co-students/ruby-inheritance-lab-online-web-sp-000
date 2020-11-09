@@ -7,14 +7,32 @@ require_relative "../lib/student.rb"
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
-
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-
 some_knowledge = avi.teach 
-
 steve.learn(some_knowledge)
-
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+# first bonus task
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Jobs"
+
+# jim.learn(some_knowledge)
+
+# second bonus task
+more_knowledge = avi.teach
+steve.learn(more_knowledge)
+puts "Steve just learned more important knowledge: '#{steve.knowledge.last}' from Avi"
+
+# third bonus task
+adam = Student.new
+adam.first_name = "Adam"
+adam.last_name = "Enbar"
+
+3.times{adam.learn(avi.teach)}
+
+# fourth bonus task
+ObjectSpace.each_object(Student){|student| puts "#{student.first_name}'s knowledge:"; student.knowledge.each{|item| puts "  #{item}"}}
