@@ -14,8 +14,6 @@ class Student < User
   
   
   def knowledge 
-    @knowledge 
+    @knowledge
+  end 
 end 
-end 
-
-#expect(sophie.instance_variable_get(:@knowledge)).to eq([]) 
