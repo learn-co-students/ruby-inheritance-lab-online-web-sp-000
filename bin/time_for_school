@@ -12,9 +12,26 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+some_more_knowledge = avi.teach 
+
+steve.learn(some_more_knowledge)
+
+puts "Steve learned even more knowledge: '#{steve.knowledge.last}' from Avi."
+
+erika = Student.new
+erika.first_name = "Erika"
+erika.last_name = "Curry-Elrod"
+
+erika.learn(some_knowledge)
+
+puts "Erika just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+Student.knowledge.each {|student| Student.knowledge}
+
+puts "#{Student.knowledge}"
