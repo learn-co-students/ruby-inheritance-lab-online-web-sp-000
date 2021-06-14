@@ -4,4 +4,10 @@ class User
         @first_name = first_name
         @last_name = last_name
     end
+
 end
+
+# tracy = User.new("Tracy", "Morgan")
+# puts tracy
+# puts tracy.first_name
+# puts tracy.last_name
